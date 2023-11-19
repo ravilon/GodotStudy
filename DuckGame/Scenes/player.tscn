@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d7gsbmiyqgl8"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/player.gd" id="1_7evqs"]
+[ext_resource type="Texture2D" uid="uid://bnv2vqlsexmvu" path="res://Art Assets/Art Assets/Characters/Duck/lr_penguin2.png" id="2_vureu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjiw0"]
+size = Vector2(6, 6)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7evqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_fjiw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.04871e-29, 1.00974e-28)
+scale = Vector2(0.71225, 0.633333)
+texture = ExtResource("2_vureu")
+offset = Vector2(0, 6)
+hframes = 8
+vframes = 7
+frame = 16
+region_rect = Rect2(5, 11, 247, 222)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_right = 1152
